@@ -1,0 +1,41 @@
+Create table Urunler(
+
+Urun_id int primary key,
+Urun_adı varchar(20),
+stok_id int,
+satıs_fiyati int,
+alıs_fiyati int);
+
+Create table Musteriler(
+
+musteri_id int primary key,
+ad varchar(30),
+soyad varchar(30),
+musteri_adres varchar(60));
+
+create table Satıslar(
+satıs_id int primary key,
+urun_id int,
+musteri_id int,
+satıs_fiyati int,
+alıs_fiyati int);
+
+
+Create table stoklar(
+stok_id int primary key,
+urun_id int,
+urun_stok_cıkısı datetime);
+
+insert into Musteriler(musteri_id,ad) values (1,'Efe')
+insert into Musteriler(musteri_id,ad) values (2,'Emre')
+insert into Musteriler(musteri_id,ad) values (3,'benan')
+insert into Musteriler(musteri_id,ad) values (4,'Erdi')
+
+Update Musteriler 
+set ad= 'Benan'
+where Musteri_id = 3;
+
+Delete from musteriler
+where (musteri_id=4)
+
+Select*from Musteriler
